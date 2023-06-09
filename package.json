@@ -11,5 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "cypress": "^12.14.0"
+  },
+  "devDependencies": {
+    "tv4": "^1.3.0"
   }
 }
