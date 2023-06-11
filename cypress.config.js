@@ -5,6 +5,7 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
-    baseUrl: "https://api.escuelajs.co"
+    baseUrl: "https://api.escuelajs.co",
+    failOnStatusCode: false
   },
 });
