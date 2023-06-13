@@ -1,4 +1,5 @@
 const tv4 = require("tv4");
+
 // Get products/Pagination
 describe('Tests which cover "GET, /api/v1/products" request ', function () {
   it("Response status code should be equal 200", function () {
@@ -385,7 +386,7 @@ describe('Tests which cover "PUT, /api/v1/products/{id}" request ', function () 
 });
 
 // Delete a product
-describe('Tests which cover "DELETE", /api/v1/products/{id}" request ', function () {
+describe('Tests which cover "DELETE", /api/v1/products/{id} request ', function () {
   it("Response status code should be equal 200", function () {
     // Verify that reponse status is equal 200
     cy.request("DELETE", "/api/v1/products/1").its("status").should("equal", 200);
