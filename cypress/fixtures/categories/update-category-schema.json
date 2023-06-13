@@ -1,0 +1,25 @@
+{
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "integer"
+      },
+      "name": {
+        "type": "string"
+      },
+      "image": {
+        "type": "string",
+        "format": "uri"
+      },
+      "creationAt": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "updatedAt": {
+        "type": "string",
+        "format": "date-time"
+      }
+    },
+    "required": ["id", "name", "image", "creationAt", "updatedAt"]
+  }
+  
