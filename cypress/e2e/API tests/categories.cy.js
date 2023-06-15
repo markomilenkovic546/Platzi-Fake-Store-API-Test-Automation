@@ -83,7 +83,7 @@ describe('Tests which cover "POST, /api/v1/categories/" request ', function () {
   });
 
   // Negative test cases
-  it("Status code should be 400 when Number Type is sent for 'name' property", function () {
+  it("Status code should be 400 when number type is sent for 'name' property", function () {
     const requestBody = {
       name: 124,
       image: "https://img.com",
@@ -100,7 +100,7 @@ describe('Tests which cover "POST, /api/v1/categories/" request ', function () {
     });
   });
 
-  it("Status code should be 400 when Array Type is sent for 'name' property", function () {
+  it("Status code should be 400 when array type is sent for 'name' property", function () {
     const requestBody = {
       name: ["New Category"],
       image: "https://img.com",
@@ -117,7 +117,7 @@ describe('Tests which cover "POST, /api/v1/categories/" request ', function () {
     });
   });
 
-  it("Status code should be 400 when Number Type is sent for 'image' property", function () {
+  it("Status code should be 400 when number type is sent for 'image' property", function () {
     const requestBody = {
       name: "New Category",
       image: 124,
@@ -264,8 +264,7 @@ describe('Tests which cover "GET, /api/v1/categories/1/products" request ', func
     });
   });
 
-
-it("Response body should contains only products with correct category id when limit & offset are set", function () {
+  it("Response body should contains only products with correct category id when limit & offset are set", function () {
     // Verify that reponse status is equal 200
     cy.request("GET", "/api/v1/categories/1/products?limit=10&offset=10").then((response) => {
       let unexpectedProducts = [];
@@ -281,22 +280,20 @@ it("Response body should contains only products with correct category id when li
         expect(unexpectedProducts.length).to.eql(0);
       } else {
         expect(true).to.be.true;
-        expect(response.body.length).to.be.eq(10)
+        expect(response.body.length).to.be.eq(10);
       }
     });
   });
 
-
-it("Should validate the actual response against the schema", () => {
-  // Send a GET request to the specified endpoint
-  cy.request("GET", "/api/v1/categories/1/products").then((response) => {
-    // Load the schema from the fixture file
-    cy.fixture("products/get-products-schema.json").then((schema) => {
-      // Validate the response body against the schema
-      const isValid = tv4.validate(response.body, schema);
-      expect(isValid).to.be.true;
+  it("Should validate the actual response against the schema", () => {
+    // Send a GET request to the specified endpoint
+    cy.request("GET", "/api/v1/categories/1/products").then((response) => {
+      // Load the schema from the fixture file
+      cy.fixture("products/get-products-schema.json").then((schema) => {
+        // Validate the response body against the schema
+        const isValid = tv4.validate(response.body, schema);
+        expect(isValid).to.be.true;
+      });
     });
   });
 });
-
-})
