@@ -85,7 +85,7 @@ describe('Tests which cover "POST, /api/v1/products" request ', function () {
     });
   });
 
-  it('Response status should be 400 When Sending Number Type for "title"', function () {
+  it('Response status should be 400 when sending number type for "title"', function () {
     const requestBody = {
       title: 2,
       price: 10,
@@ -105,7 +105,7 @@ describe('Tests which cover "POST, /api/v1/products" request ', function () {
     });
   });
 
-  it('Response status should be 400 When Sending Array Type for "title"', function () {
+  it('Response status should be 400 when sending an array type for "title"', function () {
     const requestBody = {
       title: ["New product"],
       price: 10,
@@ -126,7 +126,7 @@ describe('Tests which cover "POST, /api/v1/products" request ', function () {
     });
   });
 
-  it('Response status should be 400 When Sending String Type for "price"', function () {
+  it('Response status should be 400 when sending a string type for "price"', function () {
     const requestBody = {
       title: "New Product",
       price: "10",
@@ -147,7 +147,7 @@ describe('Tests which cover "POST, /api/v1/products" request ', function () {
     });
   });
 
-  it('Response status should be 400 When Sending negative number for "price"', function () {
+  it('Response status should be 400 shen sending a negative number for "price"', function () {
     const requestBody = {
       title: "New Product",
       price: -1,
@@ -168,7 +168,7 @@ describe('Tests which cover "POST, /api/v1/products" request ', function () {
     });
   });
 
-  it('Response status should be 400 When Sending Number Type for "description"', function () {
+  it('Response status should be 400 When sending a number type for "description"', function () {
     const requestBody = {
       title: "New Product",
       price: 10,
@@ -189,7 +189,7 @@ describe('Tests which cover "POST, /api/v1/products" request ', function () {
     });
   });
 
-  it('Response status should be 400 When Sending Array Type for "description"', function () {
+  it('Response status should be 400 when sending an array type for "description"', function () {
     const requestBody = {
       title: "New Product",
       price: 10,
@@ -210,7 +210,7 @@ describe('Tests which cover "POST, /api/v1/products" request ', function () {
     });
   });
 
-  it('Response status should be 400 When Sending String Type for "categoryId"', function () {
+  it('Response status should be 400 when sending a string type for "categoryId"', function () {
     const requestBody = {
       title: "New Product",
       price: 10,
@@ -233,7 +233,7 @@ describe('Tests which cover "POST, /api/v1/products" request ', function () {
     });
   });
 
-  it('Response status should be 400 When Sending Array Type for "categoryId"', function () {
+  it('Response status should be 400 when sending an array type for "categoryId"', function () {
     const requestBody = {
       title: "New Product",
       price: 10,
@@ -256,7 +256,7 @@ describe('Tests which cover "POST, /api/v1/products" request ', function () {
     });
   });
 
-  it('Response status should be 400 When Negative number for "categoryId"', function () {
+  it('Response status should be 400 when sending negative number for "categoryId"', function () {
     const requestBody = {
       title: "New Product",
       price: 10,
@@ -278,7 +278,7 @@ describe('Tests which cover "POST, /api/v1/products" request ', function () {
     });
   });
 
-  it('Response status should be 400 When not Sending img url inside Array for "images"', function () {
+  it('Response status should be 400 when not sending img url inside array for "images"', function () {
     const requestBody = {
       title: "New Product",
       price: 10,
@@ -299,7 +299,7 @@ describe('Tests which cover "POST, /api/v1/products" request ', function () {
     });
   });
 
-  it("Response status should be 400 When img url as a String instead of Array", function () {
+  it("Response status should be 400 when img url as a string instead of array", function () {
     const requestBody = {
       title: "New Product",
       price: 10,
