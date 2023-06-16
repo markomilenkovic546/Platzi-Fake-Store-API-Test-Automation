@@ -1,6 +1,6 @@
 const tv4 = require("tv4");
 
-// Get all users
+// Login to account
 describe('Tests which cover "POST, /api/v1/auth/login" request ', function () {
   it.only("Response status code should be equal 201'", function () {
     // Create profile
