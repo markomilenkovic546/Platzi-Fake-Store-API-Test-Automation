@@ -1,6 +1,7 @@
 # Platzi-Fake-Store-API-Test-Automation
 
 This repository contains Cypress API tests for testing the "Platzi Fake Store API".
+API documentation: https://fakeapi.platzi.com/en/rest/introduction
 
 ## Test Framework Structure
 
