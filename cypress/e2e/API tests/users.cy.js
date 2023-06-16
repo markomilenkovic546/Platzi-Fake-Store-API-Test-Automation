@@ -222,7 +222,7 @@ describe('Tests which cover "POST, /api/v1/users/" request ', function () {
 
 // Update a user
 describe('Tests which cover "PUT, /api/v1/users/{id}" request ', function () {
-  it.only("Response status code should be equal 200'", function () {
+  it("Response status code should be equal 200'", function () {
     const postRequestBody = {
       name: 1345,
       email: Math.random().toString(5).substring(2) + "@gmail.com",
@@ -252,7 +252,7 @@ describe('Tests which cover "PUT, /api/v1/users/{id}" request ', function () {
     });
   });
 
-  it.only("Name and email should be successfully updated", function () {
+  it("Name and email should be successfully updated", function () {
     const postRequestBody = {
       name: 1345,
       email: Math.random().toString(5).substring(2) + "@gmail.com",
@@ -283,7 +283,7 @@ describe('Tests which cover "PUT, /api/v1/users/{id}" request ', function () {
     });
   });
 
-  it.only("Should validate the actual response against the schema", function () {
+  it("Should validate the actual response against the schema", function () {
     cy.fixture("categories/post-category-correct-request-body.json").then((data) => {
       const postRequestBody = {
         name: 1345,
@@ -371,7 +371,7 @@ describe('Tests which cover "PUT, /api/v1/users/{id}" request ', function () {
 });
 
 describe('Tests which cover "DELETE, /api/v1/users/{id}" request ', function () {
-  it.only("User should be successfully deleted", function () {
+  it("User should be successfully deleted", function () {
     const postRequestBody = {
       name: 1345,
       email: Math.random().toString(5).substring(2) + "@gmail.com",
@@ -404,7 +404,7 @@ describe('Tests which cover "DELETE, /api/v1/users/{id}" request ', function () 
 });
 
 describe('Tests which cover "POST, /api/v1/users/is-available" request ', function () {
-  it.only("Response status code should be equal 200'", function () {
+  it("Response status code should be equal 200'", function () {
     const postRequestBody = {
       name: 1345,
       email: Math.random().toString(5).substring(2) + "@gmail.com",

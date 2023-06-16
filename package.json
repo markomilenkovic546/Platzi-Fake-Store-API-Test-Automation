@@ -4,7 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "run tests": "cypress run",
+    "auth": "cypress run  --spec \"cypress/e2e/API tests/auth.cy.js\"",
+    "categories": "cypress run  --spec \"cypress/e2e/API tests/categories.cy.js\"",
+    "filter-products": "cypress run  --spec \"cypress/e2e/API tests/filter-products.cy.js\"",
+    "products": "cypress run  --spec \"cypress/e2e/API tests/products.cy.js\"",
+    "users": "cypress run  --spec \"cypress/e2e/API tests/users.cy.js\""
+
+    
   },
   "keywords": [],
   "author": "",
@@ -16,3 +23,4 @@
     "tv4": "^1.3.0"
   }
 }
+
