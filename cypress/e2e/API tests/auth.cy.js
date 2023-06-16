@@ -1,6 +1,6 @@
 const tv4 = require("tv4");
 
-// Login to account
+// Login to profile
 describe('Tests which cover "POST, /api/v1/auth/login" request ', function () {
   it("Response status code should be equal 201'", function () {
     // Create profile
@@ -9,7 +9,6 @@ describe('Tests which cover "POST, /api/v1/auth/login" request ', function () {
         email: response.body.email,
         name: response.body.name,
       };
-
       // Login to profile
       cy.request({
         method: "POST",
@@ -72,7 +71,7 @@ describe('Tests which cover "POST, /api/v1/auth/login" request ', function () {
     });
   });
 
-  it("Should validate the actual response against the schema'", function () {
+  it("Should validate the actual response body", function () {
     cy.createProfile().then((response) => {
       // Login to profile
       cy.login(response.body.email, response.body.name).then((response) => {
@@ -97,7 +96,7 @@ describe('Tests which cover "POST, /api/v1/auth/login" request ', function () {
 
 // Get a new Access Token with a Refresh Token
 describe('Tests which cover "POST, /api/v1/auth/refresh-token" request ', function () {
-  it("Should validate the actual response against the schema'", function () {
+  it("Should validate the actual response body'", function () {
     cy.createProfile().then((response) => {
       // Login to profile
       cy.login(response.body.email, response.body.name).then((response) => {
